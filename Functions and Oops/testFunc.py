@@ -34,6 +34,7 @@ class test():
     def __myprivate(self):
         print("private method")
 
-t=test()
+
+t = test()
 t.mypublic()
 t._test__myprivate()
