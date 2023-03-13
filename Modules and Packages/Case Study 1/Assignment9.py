@@ -7,12 +7,8 @@ x, y = map(int, input("enter the value of x and y: ").split())
 print(x, y)
 mylist = []
 for i in range(x):
-    # print(i)
     mylist.append([])
     for j in range(y):
-        # j=j-i
-        mylist[i].append(j*(i-1))
-        # print(mylist)
-        j = +1
-    i=+1
+        mylist[i].append(j * i)
+
 print(mylist)
