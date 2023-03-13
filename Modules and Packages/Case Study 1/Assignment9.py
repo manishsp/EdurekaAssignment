@@ -3,5 +3,16 @@
 # following inputs are given to the program: 3,5 Then, the output of the program should be: [[0, 0, 0, 0, 0], [0, 1,
 # 2, 3, 4], [0, 2, 4, 6, 8]]
 
-x,y = map(int, input("enter the value of x and y: ").split())
-print(x,y)
+x, y = map(int, input("enter the value of x and y: ").split())
+print(x, y)
+mylist = []
+for i in range(x):
+    # print(i)
+    mylist.append([])
+    for j in range(y):
+        # j=j-i
+        mylist[i].append(j*(i-1))
+        # print(mylist)
+        j = +1
+    i=+1
+print(mylist)
