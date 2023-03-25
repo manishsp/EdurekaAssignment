@@ -4,7 +4,8 @@
 # output should be: 1010
 import MultiInput
 
-newlist=MultiInput.MultiInput.input_data_with_comma(1)
-for i in range(len(newlist)):
-    if newlist[i]%5==0:
-        print(newlist[i],end=",")
+newlist = MultiInput.MultiInput.input_data_with_comma(MultiInput)
+for i in newlist:
+    j=int(i,2)
+    if j % 5 == 0:
+        print(i, end=",")
