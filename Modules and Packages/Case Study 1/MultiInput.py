@@ -21,3 +21,7 @@ class MultiInput:
                 pass
             self.append(line)
         return self
+
+    def input_data_list(self):
+        self = list(input("Please enter your sentence: "))
+        return self
