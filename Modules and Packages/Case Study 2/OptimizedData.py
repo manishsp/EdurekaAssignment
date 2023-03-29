@@ -13,3 +13,12 @@ print(age_list)
 print(job_list)
 
 fh.close()
+newjoblist=set(job_list)
+newjoblist.remove('job')
+age_list.remove('age')
+job_list=list(newjoblist)
+# print(len(newjoblist)-1)
+min_age=min(age_list)
+max_age=max(age_list)
+print(f'max:{max_age} min:{min_age}')
+
