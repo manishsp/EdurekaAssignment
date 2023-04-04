@@ -1,5 +1,3 @@
-import re
-
 fh = open('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignment\\Modules and Packages\\Case Study 2\\bank-data.csv', "r")
 # print(fh.read())
 age_list = []
