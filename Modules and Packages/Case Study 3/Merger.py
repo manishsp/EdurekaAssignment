@@ -1,17 +1,17 @@
 import Customer, re
 
-fh=open('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignments\\Modules and Packages\\Case Study 3\\FairDealCustomerData.csv')
-# print(fh.read())
-fullnamelist=[]
-blacklistvalue=[]
-for x in fh:
-    x.rstrip('\n')
-    # re.findall(r"\s+",x)
+# fh=open('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignments\\Modules and Packages\\Case Study 3\\FairDealCustomerData.csv')
+fh = open('/Users/MspDx/IdeaProjects/EdurekaAssignment/Modules and Packages/Case Study 3/FairDealCustomerData.csv')
 
-    mylist=str.rstrip.split(x,',')
+# print(fh.read())
+fullnamelist = []
+blacklistvalue = []
+for x in fh:
+    x = x.strip('\n')
+    mylist = str.split(x, ',')
 
     fullnamelist.append(mylist[1])
     blacklistvalue.append(mylist[2])
-    mydict={"fullname":fullnamelist,"blacklist":blacklistvalue}
+    # mydict = {"fullname": fullnamelist, "blacklist": blacklistvalue}
 fh.close()
-print(mydict)
+print(f"fullname list length: {len(fullnamelist)} and blacklist list length: {len(blacklistvalue)}")
