@@ -26,6 +26,8 @@ for x in fh:
         customer_m.setFname(splitname[1])
         customer_m.setTitle(splitname[0])
         customer_m.setLname("")
+    customer_m.setIsblacklisted(mylist[2])
+    print(customer_m.isblacklisted)
 
     print(customer_m.getTitle())
     print(customer_m.getFname())
@@ -33,6 +35,8 @@ for x in fh:
     # mydict = {"fullname": fullnamelist, "blacklist": blacklistvalue}
 
 fh.close()
+
+
 #
 # print(splitname)
 # print(customer_m.getTitle())
