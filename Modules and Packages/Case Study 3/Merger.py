@@ -1,16 +1,18 @@
-import Order
+# import Order
 
 import Customer
 import re
 
 
 class CustomerNotAllowedException(Exception):
-    def __init__(self,value):
-        self.value=self
+    def __init__(self, value):
+        self.value = self
+        print(f'Customer: {self.value} is blacklisted and not allowed')
 
 
-# fh=open('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignments\\Modules and Packages\\Case Study 3\\FairDealCustomerData.csv')
-fh = open('/Users/MspDx/IdeaProjects/EdurekaAssignment/Modules and Packages/Case Study 3/FairDealCustomerData.csv')
+fh = open(
+    'C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignments\\Modules and Packages\\Case Study 3\\FairDealCustomerData.csv')
+# fh = open('/Users/MspDx/IdeaProjects/EdurekaAssignment/Modules and Packages/Case Study 3/FairDealCustomerData.csv')
 
 # print(fh.read())
 fullnamelist = []
@@ -34,25 +36,18 @@ for x in fh:
         customer_m.setLname("")
     customer_m.setIsblacklisted(int(mylist[2]))
 
-    # print(f"{customer_m.getFname()} {customer_m.getLname()}: {customer_m.isblacklisted}")
 
-    try:
-        if customer_m.isblacklisted == 0:
-            print(f"Customer: {customer_m.getFname()} {customer_m.getLname()}is not blacklisted")
-        else:
-            raise CustomerNotAllowedException("Exception")
-    except CustomerNotAllowedException:
-        print(f"Customer: {customer_m.getFname()} {customer_m.getLname()} is blacklisted and not allowed")
+    def createOrder(y, z):
+        try:
+            if z == 0:
+                print(f"Customer: {y} is not blacklisted")
+            else:
+                raise CustomerNotAllowedException(y)
+        except CustomerNotAllowedException as e:
+            # print(e.args)
+            pass
 
-Order.Order.createOrder("William",1,"XXXX","yyy")
 
-    # def createOrder(y,z):
-    #     if z==1:
-    #         raise CustomerNotAllowedException
-    #     else:
-    #         print(f"order created for {y}")
-    # createOrder(customer_m.getFname(),customer_m.isblacklisted)
+    createOrder(customer_m.getFname(), customer_m.isblacklisted)
 
 fh.close()
-
-Order.Order.createOrder()
