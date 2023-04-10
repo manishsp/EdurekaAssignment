@@ -1,5 +1,3 @@
-# import Order
-
 import Customer
 import re
 
@@ -18,7 +16,6 @@ fh = open(
 fullnamelist = []
 blacklistvalue = []
 customer_m = Customer.Customer()
-# ord1= Order.Order()
 for x in fh:
     x = re.sub('\s+', ' ', x)
     mylist = str.split(x, ',')
