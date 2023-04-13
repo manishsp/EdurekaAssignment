@@ -31,10 +31,17 @@ menwithphd = df3['Gender'].count()
 # people who don’t have a PhD from SalaryGender CSV file.
 
 df5 = df[["Age","PhD"]]
-print(df5)
+# print(df5)
 for i in df5.index:
     if df5.loc[i,"PhD"] == 0:
         df5.drop(i, inplace=True)
 
-print (f"*** Solution for 3 *** \n\n", df5)
+# print ("*** Solution for 3 *** \n\n", df5)
 # print(df5["Age"].count())
+
+
+# 4. Calculate the total number of people who have a PhD degree from SalaryGender
+# CSV file.
+
+df6=df[df["PhD"] == 1]
+print("*** Solution for 4 *** \n\n",df6["PhD"].count())
