@@ -4,7 +4,8 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignment\\NumPy and Pandas\\CSV\\SalaryGender.csv')
+# df = pd.read_csv('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignment\\NumPy and Pandas\\CSV\\SalaryGender.csv')
+df = pd.read_csv('/Users/MspDx/IdeaProjects/EdurekaAssignment/NumPy and Pandas/CSV/SalaryGender.csv')
 
 salary_arr = np.array(df["Salary"])
 gender_arr = np.array(df["Gender"])
