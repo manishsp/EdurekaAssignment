@@ -17,11 +17,3 @@ for x in np.nditer(arr):
 print(mylist)
 arr2=arr3[mylist]
 print(f'\nValues greater than 5:{arr2}')
-
-# 7. Create a numpy array having NaN (Not a Number) and print it. array([ nan, 1., 2., nan, 3., 4., 5.])
-
-
-
-# Print the same array omitting all elements which are nan
-# 8. Create a 10x10 array with random values and find the minimum and maximum values.
-# 9. Create a random vector of size 30 and find the mean value.
