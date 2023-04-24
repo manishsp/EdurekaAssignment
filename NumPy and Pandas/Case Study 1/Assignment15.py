@@ -12,6 +12,25 @@
 
 import pandas as pd
 
-df=pd.read_csv('/Users/MspDx/IdeaProjects/EdurekaAssignment/NumPy and Pandas/CSV/middle_tn_schools.csv')
+# df=pd.read_csv('/Users/MspDx/IdeaProjects/EdurekaAssignment/NumPy and Pandas/CSV/middle_tn_schools.csv')
+df=pd.read_csv('C:\\Users\\pmani\\IdeaProjects\\EdurekaAssignments\\NumPy and Pandas\\CSV\\middle_tn_schools.csv')
 print(df.describe())
-print(df.groupby('reduced_lunch','stu_teach_ratio'))
+
+
+# Phase 2 - Group data by school ratings
+# Chooses indicators that describe the student body (for example, reduced_lunch) or
+# school administration (stu_teach_ratio) hoping they will
+# explain school_rating. reduced_lunch is a variable measuring the average percentage
+# of students per school enrolled in a federal program that provides lunches for students
+#     from lower-income households. In short, reduced_lunch is a good proxy for household
+#     income.
+
+# © B r a i n 4 c e E d u c a t i o n S o l u t i o n s P v t . L t d Page 3
+# Isolates ‘reduced_lunch’ and groups the data by ‘school_rating’ using pandas groupby
+# method and then uses describe on the re-shaped data
+
+a=df.groupby(['school_rating','reduced_lunch'])
+b=df.groupby('school_rating')['reduced_lunch'].count()
+print(a.describe())
+print(b)
+print(b.describe())
